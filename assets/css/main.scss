@@ -1,0 +1,27 @@
+$primary-text-color: #b9e6f9;
+$background-color: #0077b5;
+$main-title-font: 'ATRotisSemiSans-ExtraBold';
+$subtitle-font: 'ATRotisSemiSans-Light';
+$line-color: #f68b1f;
+
+body {
+    color: $primary-text-color;
+    background-color: $background-color;
+    font-family: $main-title-font;
+}
+
+h1 {
+font-family: $main-title-font;
+}
+
+h2 {
+font-family: $subtitle-font;
+}
+
+.line {
+border-color: $line-color;
+}
+
+.arrow {
+border-left-color: $line-color;
+}
