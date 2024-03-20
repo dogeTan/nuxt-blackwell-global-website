@@ -6,7 +6,10 @@ const $axios = axios().provide.axios;
 export const useUserStore = defineStore('user', {
     state: () => ({
         id: '',
-        full_name: '',
+        firstName: '',
+        lastName: '',
+        country: '',
+        phone: '',
         email: '',
         api_token: '',
         isLoggedIn: false,
@@ -25,9 +28,12 @@ export const useUserStore = defineStore('user', {
             });
         },
         
-        async register(name, email, password, confirmPassword) {
+        async register(firstName, lastName, country, phone, email, password, confirmPassword) {
             await $axios.post('/api/register', {
-              full_name: name,
+              firstName: firstName,
+              lastName: lastName,
+              country: country,
+              phone: phone,
               email: email,
               password: password,
               password_confirmation: confirmPassword
@@ -49,7 +55,8 @@ export const useUserStore = defineStore('user', {
 
         resetState() {      
             this.$state.id = ''
-            this.$state.full_name = ''
+            this.$state.firstName = ''
+            this.$state.lastName = ''
             this.$state.email = ''
             this.$state.api_token = ''
             this.$state.isLoggedIn = false

@@ -1,7 +1,8 @@
 import axios from "axios"
 
+
 export default defineNuxtPlugin((nuxtApp) => {
-    axios.defaults.baseURL = 'mysql://root:@localhost:3309/your_db'
+    axios.defaults.baseURL = 'http://root:127.0.0.1:27071/blackwell-global';
     axios.defaults.withCredentials = false;
     axios.defaults.proxy = false;
     if(process.client){

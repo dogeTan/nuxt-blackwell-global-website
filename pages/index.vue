@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-no-repeat" :style="{ backgroundImage: `url(${backgroundImageUrl})` }"> 
+  <div class="bg-no-repeat " :style="{ backgroundImage: `url(${backgroundImageUrl})` }"> 
       <nav class="bg-transparent">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" >
         <div class="flex justify-between h-16">
@@ -8,30 +8,56 @@
             <img src="../assets/images/logo-white.png" alt="Logo" class="h-8">
           </div>
 
+          <!-- test <div class="flex flex-col items-center md:items-start"></div> -->
+
           <!-- Promotion and Timer -->
-          <div class="hidden md:flex items-center justify-center">
+          <div class="hidden md:flex items-center justify-center ">
             <span class="text-white mr-4">PROMOTION <br/> ENDING IN</span> 
-            
-              <span class="text-white mr-4">71 <br/> Days</span>
-              <span class="text-white mr-4">16 <br/> Hours</span>
-              <span class="text-white mr-4">52 <br/> Minutes</span>
-              <span class="text-white mr-4">17 <br/> Seconds</span>
+
+              <div class="hidden md:flex flex flex-col items-center md:items-start flex-col">
+                <span class="text-white mr-4">71 </span>
+                <span class="text-white mr-4">Days</span>
+              </div>
+
+              <span class="text-white mr-4">:</span>
+
+              <div class="hidden md:flex flex flex-col items-center md:items-start flex-col">
+                <span class="text-white mr-4">16  </span>
+                <span class="text-white mr-4">Hours</span>
+              </div>
+
+              <span class="text-white mr-4">:</span>
+
+              <div class="hidden md:flex flex flex-col items-center md:items-start flex-col">
+                <span class="text-white mr-4">52  </span>
+                <span class="text-white mr-4">Minutes</span>
+              </div>
+
+              <span class="text-white mr-4">:</span>
+
+              <div class="hidden md:flex flex flex-col items-center md:items-start flex-col">
+                <span class="text-white mr-4">38  </span>
+                <span class="text-white mr-4">Seconds</span>
+              </div>
+
           </div>
 
+
           <!-- Register Now Button -->
-          <div class="hidden md:block">
-            <button class="bg-blue-600 text-white px-4 py-2 rounded-md">Register Now</button>
+          <div class="hidden md:block mt-4">
+            <button class="bg-orange-600  hover:bg-orange-700 font-bold text-white px-4 py-2 rounded-full w-full">Register Now</button>
           </div>
 
           <!-- Guest Section -->
           <div class="flex items-center">
             <!-- Guest Logo -->
-            <div class="hidden md:block mr-4">
+            <div class="hidden md:block ">
               <img src="" alt="Guest Logo" class="h-8">
             </div>
             <!-- Login Button (visible only on small screens) -->
             <button class="md:hidden bg-blue-600 text-white px-4 py-2 rounded-md">Login</button>
             
+
             <!-- Mobile menu button -->
             <div class="-mr-2 flex items-center sm:hidden">
               <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white" aria-controls="mobile-menu" aria-expanded="false">
@@ -46,6 +72,8 @@
                 </svg>
               </button>
             </div>
+
+
           </div>
         </div>
       </div>
@@ -111,13 +139,11 @@
     <div class="max-w-4xl mx-auto px-4 py-8 relative z-10">
       <!-- Title -->
       <fieldset class="text-2xl font-bold mb-4 text-white">
-        <legend  class="text-2xl font-bold mb-4">
+        <legend  class="text-2xl font-bold mb-4"  style="color: orange;">
           Free US$600 Credits!
         </legend>
         
         <div class="flex flex-col lg:flex-row items-start gap-8">
-          <!-- Image -->
-          <img src="~/assets/images/Promo-1B.png" alt="Logo" class="lg:w-1/2 lg:ml-auto mb-8 md:mb-0">
 
           <!-- Description -->
           <div class="lg:w-1/2">
@@ -125,13 +151,14 @@
             <p class="text-sm mb-8">when you open an account & deposit US$200</p>
             <p class="text-lg mb-4">2. US$20 credits</p>
             <p class="text-sm mb-8">for every lot you trade, up to 20 lots</p>
-
             <!-- Buttons -->
             <div class="grid grid-cols-2 gap-4">
               <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Create Live Account</button>
               <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Download MT4 Platform</button>
             </div>
           </div>
+           <!-- Image -->
+          <img src="~/assets/images/Promo-1B.png" alt="Logo" class="lg:w-1/2 lg:ml-auto mb-8 md:mb-0">
 
        </div>
     </fieldset>
@@ -144,10 +171,11 @@
       <div class="max-w-4xl mx-auto px-4 py-8 relative z-10">
         <!-- Title -->
         <fieldset class="text-2xl font-bold mb-4 text-white">
-          <legend  class="text-2xl font-bold mb-4">
+         
+          <legend  class="text-2xl font-bold lg:ml-auto mb-4"  style="color: orange;">
             Free INR 22,0000 Gift Cards!
           </legend>
-          
+
           <div class="flex flex-col lg:flex-row items-start gap-8">
             <!-- Image -->
             <img src="~/assets/images/Promo-2B.png" alt="Logo" class="lg:w-1/2 lg:ml-auto mb-8 md:mb-0">
@@ -171,35 +199,39 @@
     </section>
   
     <!--FOR SECTION 5 -->>
-    <section class="relative py-8 md:py-12 bg-no-repeat" :style="{ backgroundImage: `url(${easyStepBg})` }" >
-      <div class="md:ml-4">
-            <h1 class="text-white text-4xl font-bold mb-8">3 Easy Steps to Refer</h1>
-                <div class="grid grid-cols-3 gap-11">
-                    <div class="bg-gray-800 p-4 rounded-lg flex items-center bg-transparent">
-                      <div>
-                        <img src="~/assets/images/Step01.png" alt="Logo" class="md:ml-auto mb-4">
-                        Create an account with Blackwell Blobal & log in to the Client Portal
-                      </div>
-                    </div>
-
-                    <div class="bg-gray-800 p-4 rounded-lg flex items-center bg-transparent">
-                      <div>
-                        <img src="~/assets/images/Step02.png" alt="Logo" class="md:ml-auto mb-4">
-                      </div>
-                    </div>
-
-                    <div class="bg-gray-800 p-4 rounded-lg flex items-center bg-transparent">
-                      <div>
-                        <img src="~/assets/images/Step03.png" alt="Logo" class="md:ml-auto mb-4">
-                      </div>
-                    </div>
-              </div>
+    <section class="relative py-8 md:py-12 bg-no-repeat bg-cover" :style="{ backgroundImage: `url(${easyStepBg})` }">
+    <div class="md:ml-4 relative max-w-screen-xl mx-auto">
+      <h1 class="text-white text-4xl font-bold mb-8">3 Easy Steps to Refer</h1>
+      <div class="grid grid-cols-3 gap-11">
+        <div class="relative">
+          <img src="~/assets/images/Step01.png" alt="Step 01" class=" inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <span class="text-white text-center">Create an account with Blackwell Global & log in to the Client Portal</span>
+          </div>
         </div>
-    </section>
+
+        <div class="relative">
+          <img src="~/assets/images/Step02.png" alt="Step 02" class=" inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <span class="text-white text-center">Enter your Referral's information & click on Submit</span>
+          </div>
+        </div>
+
+        <div class="relative">
+          <img src="~/assets/images/Step03.png" alt="Step 03" class=" inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <span class="text-white text-center">Receive confirmation of the referral in your email</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
 
     <!--FOR SECTION 6 Register Now -->
-    <section class="bg-cover bg-center flex items-center justify-center py-8 md:py-12">
-      <div class="h-screen w-full flex justify-center">
+    <section class="bg-cover bg-center flex items-center justify-center py-8 md:py-12 relative">
+      <!-- <div class="h-screen w-full flex justify-center"> -->
             <div class="lg:pt-7 pt-3 lg:px-12 px-6 lg:w-2/3 w-full lg:min-w-[800px]">
                 <main class="w-full">
                     <div class="w-full md:max-w-[550px] max-w-[360px] mx-auto">
@@ -211,12 +243,12 @@
                             <form class="mt-12" @submit.prevent="register()">
                                 <div>
                                     <TextInput placeholder="First Name" v-model:input="firstName" inputType="text"
-                                        :error="errors && errors.name ? errors.name[0] : ''" />
+                                        :error="errors && errors.firstName ? errors.firstName[0] : ''" />
                                 </div>
 
                                 <div class="mt-4">
                                     <TextInput placeholder="Last Name" v-model:input="lastName" inputType="text"
-                                        :error="errors && errors.name ? errors.name[0] : ''" />
+                                        :error="errors && errors.lastName ? errors.lastName[0] : ''" />
                                 </div>
 
                                 <div class="mt-4">
@@ -226,12 +258,12 @@
 
                                 <div class="mt-4">
                                     <TextInput placeholder="Country" v-model:input="country"
-                                        inputType="email" :error="errors && errors.email ? errors.email[0] : ''" />
+                                        inputType="text" :error="errors && errors.country ? errors.country[0] : ''" />
                                 </div>
 
                                 <div class="mt-4">
                                     <TextInput placeholder="Phone" v-model:input="phone"
-                                        inputType="email" :error="errors && errors.email ? errors.email[0] : ''" />
+                                        inputType="text" :error="errors && errors.phone ? errors.phone[0] : ''" />
                                 </div>
 
                                 <div class="mt-4">
@@ -245,16 +277,21 @@
                                 </div>
 
                                 <div class="mt-4">
+                                  <input type="checkbox" id="myCheckbox" class="form-checkbox text-blue-500 h-5 w-5">
                                     I confirm that I am at least 18 years old.
                                 </div>
 
                                 <div class="mt-4">
+                                  <input type="checkbox" id="myCheckbox" class="form-checkbox text-blue-500 h-5 w-5">
                                    By joining and participating in the Competition, I ackowledge and confirm that I have read, understood and agreed to be bound by the Terms and Conditions of the
-                                   Competition.
+                                   Competition. 
+                                   <br />
+                                   <input type="checkbox" id="myCheckbox" class="form-checkbox text-blue-500 h-5 w-5">
+                                  This side is protected by reCAPICHA and the Google Privacy Policy and Terms of Service apply.
                                 </div>
 
                                 <div class="mt-10">
-                                  This side is protected by reCAPICHA and the Google Privacy Policy and Terms of Service apply.
+                                  
                                     <button type="submit" class="bg-gray-400 hover:bg-gray-700 rounded-full w-full p-3 font-bold"
                                         :disabled="(!name || !email || !password || !confirmPassword)"
                                         :class="(name && email && password && confirmPassword) ?
@@ -279,12 +316,12 @@
                         </div>
                     </div>
                 </main>
-            </div>
+            <!-- </div> -->
         </div>
     </section>
 
     <!--FOR SECTION 7 Trading Guides--> 
-    <section class="bg-cover bg-center flex items-center justify-center py-8 md:py-12" >
+    <section class="bg-cover bg-center flex items-center justify-center py-8 md:py-12 " >
         <div class="md:text-center md:ml-4">
             <h1 class="text-white text-4xl font-bold mb-8">Trading Guides</h1>
                 <div class="grid grid-cols-3 gap-4">
@@ -315,14 +352,29 @@
       </section>
   </div>
 
-    <!--FOR SECTION 8  Footer-->
-    <footer class="bg-blue-900 bg-cover bg-center flex items-center justify-center py-8 md:py-12" >
-      <div>
-          <span class="text-white text-2xl block mb-2">LOG IN TO MT4 DESKTOP APP</span>
+    <!--FOR Footer-->
+    <footer class="bg-blue-900 bg-cover bg-center flex justify-center py-8 md:py-12" >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center">
+
+
+        <div class="flex flex-col items-center md:items-start">
+          <p class="mb-4">LOG IN TO MT4 DESKTOP APP</p>
+          <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded mb-4">Download Platform</button>
+          <p class="mb-4">LOG IN VIA MT4 MOBILE APP</p>
+
+          <div class="flex flex-col items-center md:items-start">
+            <div class="flex justify-center md:justify-start space-x-4">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Download on the IOS Platform</button>
+              <button class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">Download on the Android Platform</button>
+            </div>
+          </div>
+        </div>
+
       </div>
-
-
+      </div>
     </footer>
+
 </template>
 
 <script setup>
